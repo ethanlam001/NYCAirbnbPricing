@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NYC AirBnB Machine Learning Web App</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+<h1>Price Prediction for an NYC AirBnB listing </h1>
+<p> Please fill in the inputs below to predict the price of the AirBnB listing</p>
+
+<div>
+    <form action="/result" method="POST">
+        <label for= neighbourhood> Neighbourhood</label>
+        <select id= neighbourhood name=neighbourhood>
+            <option value="Bedford-Stuyvesant">Bedford-Stuyvesant</option>
+            <option value="Bushwick">Bushwick</option>
+            <option value="Chelsea">Chelsea</option>
+            <option value="Clinton Hill">Clinton Hill</option>
+            <option value="Crown Heights">Crown Heights</option>
+            <option value="East Flatbush">East Flatbush</option>
+            <option value="East Harlem">East Harlem</option>
+            <option value="East Village">East Village</option>
+            <option value="Financial District">Financial District</option>
+            <option value="Flatbush">Flatbush</option>
+            <option value="Flushing">Flushing</option>
+            <option value="Fort Greene">Fort Greene</option>
+            <option value="Greenpoint">Greenpoint</option>
+            <option value="Harlem">Harlem</option>
+            <option value="Hell's Kitchen">Hell's Kitchen</option>
+            <option value="Kips Bay">Kips Bay</option>
+            <option value="Long Island City">Long Island City</option>
+            <option value="Lower East Side">Lower East Side</option>
+            <option value="Midtown">Midtown</option>
+            <option value="Murray Hill">Murray Hill</option>
+            <option value="Park Slope">Park Slope</option>
+            <option value="Prospect-Lefferts Gardens">Prospect-Lefferts Gardens</option>
+            <option value="Ridgewood">Ridgewood</option>
+            <option value="Never-worked">Never-worked</option>
+            <option value="West Village">West Village</option>
+            <option value="Williamsburg">Williamsburg</option>
+            <option value="Others">Others</option>
+        </select>
+        <br>
+        <label for= neighbourhood_group> Neighbourhood Group</label>
+        <select id= neighbourhood_group name=neighbourhood_group>
+            <option value="Bronx">Bronx</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Manhatten">Manhatten</option>
+            <option value="Queens">Queens</option>
+            <option value="Staten Island">Staten Island</option>
+        </select>
+        <br>
+        <label for=room_type>Room Type</label>
+        <select id=room_type name=room_type>
+            <option value="Entire Home/Apartment">Entire Home/Apartment</option>
+            <option value="Private Room">Private Room</option>
+            <option value="Shared Room">Shared Room</option>
+        </select>
+        <br>
+        <label>Lattitude</label>
+        <input type="text" name="lattitude">
+        <br>
+        <label>Longitude</label>
+        <input type="text" name="longitude">
+        <br>
+        <label>Minimum Nights</label>
+        <input type="text" name="minimum_Nights">
+        <br>
+        <label>Number of Reviews</label>
+        <input type="text" name="number_of_reviews">
+        <br>
+        <label>Last Review</label>
+        <input type="text" name="last_review">
+        <br>
+        <label>Reviews per Month</label>
+        <input type="text" name="reviews_per_month">
+        <br>
+        <label>Calculated Host Listings Count</label>
+        <input type="text" name="calculated_host_listings_count">
+        <br>
+        <label>Availability 365</label>
+        <input type="text" name="availability_365">
+        <br>
+        <label>No Reviews</label>
+        <input type="text" name="no_reviews">
+        <br>
+        <label>Low Availability</label>
+        <input type="text" name="lowavailability">
+        <br>
+        <label>All Year Available</label>
+        <input type="text" name="allyearavail">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
